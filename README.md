@@ -21,13 +21,13 @@ It never invents prices, customers, logos or stats, never fakes a feature that i
 ## Install
 
 ```bash
-npx skills add <your-github-user>/imolern-studio -g -a claude-code
+npx skills add Kiki731/imolern-studio -g -a claude-code
 ```
 
 Or clone and link it:
 
 ```bash
-git clone https://github.com/<your-github-user>/imolern-studio.git
+git clone https://github.com/Kiki731/imolern-studio.git
 ln -s "$PWD/imolern-studio/skills/imolern-studio" ~/.claude/skills/imolern-studio
 ```
 
