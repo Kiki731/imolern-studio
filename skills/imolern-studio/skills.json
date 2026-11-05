@@ -1,0 +1,26 @@
+{
+  "note": "Skills Imolern Studio relies on. 'required' must be installed before design starts; 'recommended' are offered. Install with: npx skills add <repo> -g -a claude-code -s <skill> -y",
+  "required": [
+    { "skill": "impeccable", "repo": "pbakaus/impeccable", "why": "Design rules, critique, audit and polish. Run on everything Imolern Studio makes." },
+    { "skill": "frontend-design", "repo": "anthropics/skills", "why": "Distinctive visual direction; keeps work away from templated defaults." },
+    { "skill": "gsap-core", "repo": "greensock/gsap-skills", "why": "Default motion library: tweens, easing, reduced motion." },
+    { "skill": "gsap-timeline", "repo": "greensock/gsap-skills", "why": "Sequenced, orchestrated moments." },
+    { "skill": "gsap-scrolltrigger", "repo": "greensock/gsap-skills", "why": "Scroll-linked motion and pinning." },
+    { "skill": "gsap-react", "repo": "greensock/gsap-skills", "why": "GSAP in React and Next.js with clean-up." },
+    { "skill": "gsap-performance", "repo": "greensock/gsap-skills", "why": "Smooth 60fps motion." },
+    { "skill": "gsap-plugins", "repo": "greensock/gsap-skills", "why": "SplitText, Flip, Draggable, SVG drawing." },
+    { "skill": "gsap-utils", "repo": "greensock/gsap-skills", "why": "Helpers for motion maths." },
+    { "skill": "gsap-frameworks", "repo": "greensock/gsap-skills", "why": "GSAP in Vue and Svelte." }
+  ],
+  "recommended": [
+    { "skill": "emil-design-eng", "repo": "emilkowalski/skill", "why": "UI polish and the small details." },
+    { "skill": "review-animations", "repo": "emilkowalski/skill", "why": "Reviews motion against clear standards." },
+    { "skill": "animation-vocabulary", "repo": "emilkowalski/skill", "why": "Names motion effects seen on reference sites." },
+    { "skill": "apple-design", "repo": "emilkowalski/skill", "why": "Physical, interruptible motion and gestures." },
+    { "skill": "web-design-guidelines", "repo": "vercel-labs/agent-skills", "why": "Interface guideline checks." },
+    { "skill": "vercel-react-best-practices", "repo": "vercel-labs/agent-skills", "why": "React and Next.js performance." },
+    { "skill": "userinterface-wiki", "repo": "raphaelsalaja/userinterface-wiki", "why": "UI and UX best practices." },
+    { "skill": "extract-design-system", "repo": "arvindrk/extract-design-system", "why": "Pulls tokens from a reference site." },
+    { "skill": "shadcn", "repo": "shadcn/ui", "why": "Component base for dashboards and portals." }
+  ]
+}
