@@ -20,18 +20,40 @@ It never invents prices, customers, logos or stats, never fakes a feature that i
 
 ## Install
 
+Imolern Studio is a standard agent skill (`SKILL.md`), so it works in Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Windsurf, OpenCode and any other agent the [`skills`](https://www.npmjs.com/package/skills) installer supports. You need Node.js for `npx`.
+
+Run this in a terminal and pick your agent when asked (or let it detect the one you're in):
+
 ```bash
-npx skills add Kiki731/imolern-studio -g -a claude-code
+npx skills add Kiki731/imolern-studio -g
 ```
 
-Or clone and link it:
+Or name the agent directly:
+
+| Agent | Command |
+|---|---|
+| Claude Code | `npx skills add Kiki731/imolern-studio -g -a claude-code` |
+| Codex | `npx skills add Kiki731/imolern-studio -g -a codex` |
+| Cursor | `npx skills add Kiki731/imolern-studio -g -a cursor` |
+| Gemini CLI | `npx skills add Kiki731/imolern-studio -g -a gemini-cli` |
+| GitHub Copilot | `npx skills add Kiki731/imolern-studio -g -a github-copilot` |
+| Windsurf | `npx skills add Kiki731/imolern-studio -g -a windsurf` |
+| Several at once | `npx skills add Kiki731/imolern-studio -g -a claude-code codex cursor` |
+
+Leave out `-g` to install into the current project only.
+
+**Without npx:** clone the repo and copy (or link) `skills/imolern-studio` into your agent's skills folder, for example `~/.claude/skills/` for Claude Code or `~/.agents/skills/` for Codex.
 
 ```bash
 git clone https://github.com/Kiki731/imolern-studio.git
-ln -s "$PWD/imolern-studio/skills/imolern-studio" ~/.claude/skills/imolern-studio
+ln -s "$PWD/imolern-studio/skills/imolern-studio" ~/.agents/skills/imolern-studio
 ```
 
-Then start Claude Code and say: **"Let's build a website with Imolern Studio."**
+Then start your agent and say: **"Let's build a website with Imolern Studio."** On first run it checks the skills it depends on, in the folders *your* agent reads, and offers to install what's missing for that agent.
+
+### What it needs from the agent
+
+A shell, file editing, and ideally a browser the agent can drive (to study reference sites and check pages). Without a browser tool it asks you for screenshots of the references and tells you which checks it couldn't run. Image and logo services connect through MCP, which most agents support.
 
 ## Skills it uses
 

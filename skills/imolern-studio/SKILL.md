@@ -23,12 +23,14 @@ Talk to the user in plain language, outcome first. Never invent facts about thei
 ## Step 1 — Setup: skills
 
 1. Ask: "Imolern Studio uses a set of design and motion skills. May I check which ones you already have installed?"
-2. On yes, run `python3 <skill-dir>/scripts/check_skills.py`. It reads [skills.json](skills.json) and lists what is installed and missing, with the install commands.
+2. On yes, run `python3 <skill-dir>/scripts/check_skills.py --agent <you>`, where `<you>` is the agent you are running as: `claude-code`, `codex`, `cursor`, `gemini-cli`, `github-copilot`, `windsurf`, `opencode`, `amp`, `cline`, `goose` (any name the `skills` installer accepts). If unsure, leave `--agent` out and the script guesses. It reads [skills.json](skills.json) and lists what this agent can see and what's missing, with install commands.
 3. Tell the user what's missing (required first, then recommended, each with one line on why). Ask permission to install.
-4. On yes, run the printed commands (`npx skills add <repo> -g -a claude-code -s <skill> -y`). Install only what is missing.
+4. On yes, run the printed commands (`npx skills add <repo> -g -a <agent> -s <skills> -y`). Install only what is missing. Needs Node.js; if `npx` isn't available, tell the user and offer the manual route: clone each repo and copy the skill folder into this agent's skills folder (the script prints the folders it checks).
 5. Run the check again and confirm: "All set — N skills installed." If an install fails, say which and why, and continue only if the required set is complete.
 
-New skills load in the next session. If a required skill was just installed and isn't available yet, tell the user to start a new session (or reload skills) and pick up from step 2; the notes in `docs/` carry the context.
+New skills usually load in the next session. If a required skill was just installed and isn't available yet, tell the user to start a new session (or reload skills) and pick up from step 2; the notes in `docs/` carry the context. If a skill still can't be loaded, open its `SKILL.md` from the folder the script printed and follow it directly.
+
+**Tools this method expects:** a shell, file editing, and a browser the agent can drive (for studying references and checking pages). If there's no browser tool, ask the user for screenshots and screen recordings of each reference, read the page source with a fetch tool where possible, and say plainly which checks couldn't be run.
 
 ## Step 2 — Brief and stack
 
@@ -51,7 +53,7 @@ Images and logos are needed from the first mock-up, so set these up now. See [re
 - **Unsplash** — photography.
 - **Magnific** — generated and upscaled images.
 
-Check which are already connected; for each missing one, explain how to connect it and where the key goes. **API keys go into connector settings or a git-ignored `.env`, never into the chat.** Any can be skipped; note the gap in the pending list.
+Check which are already connected; for each missing one, explain how to connect it in this agent and where the key goes. **API keys go into MCP/connector settings or a git-ignored `.env`, never into the chat.** Any can be skipped; note the gap in the pending list.
 
 ## Step 4 — References (the most important step)
 

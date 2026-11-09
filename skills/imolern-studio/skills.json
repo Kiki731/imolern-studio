@@ -1,5 +1,5 @@
 {
-  "note": "Skills Imolern Studio relies on. 'required' must be installed before design starts; 'recommended' are offered. Install with: npx skills add <repo> -g -a claude-code -s <skill> -y",
+  "note": "Skills Imolern Studio relies on. 'required' must be installed before design starts; 'recommended' are offered. Install with: npx skills add <repo> -g -a <agent> -s <skill> -y (scripts/check_skills.py prints the exact commands for the agent running it)",
   "required": [
     { "skill": "impeccable", "repo": "pbakaus/impeccable", "why": "Design rules, critique, audit and polish. Run on everything Imolern Studio makes." },
     { "skill": "frontend-design", "repo": "anthropics/skills", "why": "Distinctive visual direction; keeps work away from templated defaults." },

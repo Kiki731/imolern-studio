@@ -21,7 +21,7 @@ design/mockups/
 
 Copy `scripts/build_mockups.py` into `design/mockups/` and run `python3 _build.py` after any change to a partial or source. Each source starts with `<!--TITLE: Page title-->`.
 
-Serve with `python3 -m http.server 8790` from the project root and give the user `http://localhost:8790/design/mockups/02-home.html`. If the session has a preview/launch config, add the server there.
+Serve with `python3 -m http.server 8790` from the project root and give the user `http://localhost:8790/design/mockups/02-home.html`. If the agent has its own preview or dev-server panel, start the server through it so the user can watch.
 
 ## The style tile (`01-style-tile.html`)
 
